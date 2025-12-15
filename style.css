@@ -615,6 +615,16 @@ section {
     color: var(--accent);
 }
 
+.project-link.disabled {
+    color: var(--text-muted);
+    cursor: default;
+    font-style: italic;
+}
+
+.project-link.disabled:hover {
+    color: var(--text-muted);
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
