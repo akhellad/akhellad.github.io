@@ -656,6 +656,14 @@ section {
     color: var(--accent);
 }
 
+.skills-note {
+    text-align: center;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 2.5rem;
+    font-size: 0.9rem;
+}
+
 .contact {
     text-align: center;
     padding: 8rem 4rem;
