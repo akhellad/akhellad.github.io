@@ -1,0 +1,107 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#12121a"/>
+      <stop offset="100%" style="stop-color:#1a1a25"/>
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background (map base) -->
+  <rect width="400" height="300" fill="url(#bgGrad3)"/>
+  
+  <!-- Terrain texture -->
+  <g opacity="0.1">
+    <rect x="0" y="0" width="400" height="300" fill="#4b5563"/>
+  </g>
+  
+  <!-- Department boundary -->
+  <path d="M50 50 Q80 30 150 45 Q220 20 280 55 Q340 40 370 80 Q385 140 360 200 Q380 250 340 275 Q280 290 200 270 Q120 285 70 250 Q30 200 40 140 Q25 90 50 50 Z" 
+        fill="none" stroke="#a855f7" stroke-width="2" opacity="0.6" stroke-dasharray="8,4"/>
+  
+  <!-- Water network (pipes) -->
+  <g stroke="#3b82f6" stroke-width="3" fill="none" opacity="0.8">
+    <!-- Main lines -->
+    <path d="M80 100 L150 90 L220 110 L300 95 L350 120"/>
+    <path d="M150 90 L140 150 L160 200 L180 250"/>
+    <path d="M220 110 L230 160 L210 220"/>
+    <path d="M300 95 L280 140 L290 190 L270 240"/>
+    <!-- Secondary lines -->
+    <path d="M140 150 L100 170 L80 200" stroke-width="2" opacity="0.6"/>
+    <path d="M230 160 L260 175 L250 210" stroke-width="2" opacity="0.6"/>
+    <path d="M280 140 L320 155 L340 190" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <!-- Water points (stations, reservoirs) -->
+  <g>
+    <!-- Reservoirs (larger) -->
+    <circle cx="80" cy="100" r="10" fill="#3b82f6" opacity="0.9"/>
+    <circle cx="80" cy="100" r="14" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.5"/>
+    
+    <circle cx="350" cy="120" r="10" fill="#3b82f6" opacity="0.9"/>
+    <circle cx="350" cy="120" r="14" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.5"/>
+    
+    <!-- Stations (medium) -->
+    <circle cx="150" cy="90" r="7" fill="#60a5fa"/>
+    <circle cx="220" cy="110" r="7" fill="#60a5fa"/>
+    <circle cx="300" cy="95" r="7" fill="#60a5fa"/>
+    <circle cx="140" cy="150" r="6" fill="#60a5fa"/>
+    <circle cx="230" cy="160" r="6" fill="#60a5fa"/>
+    <circle cx="280" cy="140" r="6" fill="#60a5fa"/>
+    
+    <!-- Distribution points (small) -->
+    <circle cx="160" cy="200" r="4" fill="#93c5fd"/>
+    <circle cx="180" cy="250" r="4" fill="#93c5fd"/>
+    <circle cx="210" cy="220" r="4" fill="#93c5fd"/>
+    <circle cx="270" cy="240" r="4" fill="#93c5fd"/>
+    <circle cx="290" cy="190" r="4" fill="#93c5fd"/>
+    <circle cx="100" cy="170" r="4" fill="#93c5fd"/>
+    <circle cx="80" cy="200" r="4" fill="#93c5fd"/>
+    <circle cx="320" cy="155" r="4" fill="#93c5fd"/>
+    <circle cx="340" cy="190" r="4" fill="#93c5fd"/>
+    <circle cx="260" cy="175" r="4" fill="#93c5fd"/>
+    <circle cx="250" cy="210" r="4" fill="#93c5fd"/>
+  </g>
+  
+  <!-- Info popup simulation -->
+  <g transform="translate(240, 45)">
+    <rect x="0" y="0" width="110" height="65" fill="#1a1a25" rx="4" stroke="#2a2a3a" stroke-width="1"/>
+    <text x="10" y="18" font-family="monospace" font-size="9" fill="#a855f7">Station #12</text>
+    <text x="10" y="32" font-family="monospace" font-size="8" fill="#9595a8">Débit: 45 m³/h</text>
+    <text x="10" y="44" font-family="monospace" font-size="8" fill="#9595a8">Pression: 3.2 bar</text>
+    <text x="10" y="56" font-family="monospace" font-size="8" fill="#22c55e">● En service</text>
+    <!-- Pointer -->
+    <polygon points="30,65 40,75 50,65" fill="#1a1a25"/>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(15, 200)">
+    <rect x="0" y="0" width="85" height="75" fill="#12121a" opacity="0.9" rx="4"/>
+    <text x="10" y="16" font-family="monospace" font-size="8" fill="#e8e8ed">Légende</text>
+    <circle cx="18" cy="30" r="5" fill="#3b82f6"/>
+    <text x="28" y="33" font-family="monospace" font-size="7" fill="#9595a8">Réservoir</text>
+    <circle cx="18" cy="45" r="4" fill="#60a5fa"/>
+    <text x="28" y="48" font-family="monospace" font-size="7" fill="#9595a8">Station</text>
+    <circle cx="18" cy="60" r="3" fill="#93c5fd"/>
+    <text x="28" y="63" font-family="monospace" font-size="7" fill="#9595a8">Distribution</text>
+  </g>
+  
+  <!-- Zoom controls simulation -->
+  <g transform="translate(365, 15)">
+    <rect x="0" y="0" width="24" height="50" fill="#1a1a25" rx="4" stroke="#2a2a3a" stroke-width="1"/>
+    <text x="7" y="18" font-family="sans-serif" font-size="14" fill="#9595a8">+</text>
+    <line x1="4" y1="25" x2="20" y2="25" stroke="#2a2a3a" stroke-width="1"/>
+    <text x="8" y="40" font-family="sans-serif" font-size="14" fill="#9595a8">−</text>
+  </g>
+  
+  <!-- Label overlay -->
+  <rect x="15" y="255" width="70" height="30" fill="#12121a" opacity="0.9" rx="4"/>
+  <text x="25" y="275" font-family="monospace" font-size="11" fill="#a855f7">SIG</text>
+  
+  <!-- Tech stack -->
+  <rect x="260" y="255" width="125" height="30" fill="#12121a" opacity="0.9" rx="4"/>
+  <text x="270" y="275" font-family="monospace" font-size="10" fill="#3b82f6">Leaflet + Docker</text>
+</svg>

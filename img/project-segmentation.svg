@@ -1,0 +1,72 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#12121a"/>
+      <stop offset="100%" style="stop-color:#1a1a25"/>
+    </linearGradient>
+    <linearGradient id="vegGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e"/>
+      <stop offset="100%" style="stop-color:#16a34a"/>
+    </linearGradient>
+    <linearGradient id="urbanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6b7280"/>
+      <stop offset="100%" style="stop-color:#4b5563"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgGrad)"/>
+  
+  <!-- Grid pattern (satellite feel) -->
+  <g opacity="0.1" stroke="#a855f7" stroke-width="0.5">
+    <line x1="0" y1="50" x2="400" y2="50"/>
+    <line x1="0" y1="100" x2="400" y2="100"/>
+    <line x1="0" y1="150" x2="400" y2="150"/>
+    <line x1="0" y1="200" x2="400" y2="200"/>
+    <line x1="0" y1="250" x2="400" y2="250"/>
+    <line x1="50" y1="0" x2="50" y2="300"/>
+    <line x1="100" y1="0" x2="100" y2="300"/>
+    <line x1="150" y1="0" x2="150" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="300"/>
+    <line x1="250" y1="0" x2="250" y2="300"/>
+    <line x1="300" y1="0" x2="300" y2="300"/>
+    <line x1="350" y1="0" x2="350" y2="300"/>
+  </g>
+  
+  <!-- Urban blocks -->
+  <rect x="20" y="20" width="80" height="60" fill="url(#urbanGrad)" opacity="0.6" rx="2"/>
+  <rect x="120" y="30" width="100" height="80" fill="url(#urbanGrad)" opacity="0.5" rx="2"/>
+  <rect x="250" y="20" width="70" height="50" fill="url(#urbanGrad)" opacity="0.6" rx="2"/>
+  <rect x="300" y="90" width="80" height="70" fill="url(#urbanGrad)" opacity="0.5" rx="2"/>
+  <rect x="30" y="180" width="90" height="70" fill="url(#urbanGrad)" opacity="0.6" rx="2"/>
+  <rect x="200" y="200" width="110" height="80" fill="url(#urbanGrad)" opacity="0.5" rx="2"/>
+  <rect x="330" y="200" width="60" height="90" fill="url(#urbanGrad)" opacity="0.6" rx="2"/>
+  
+  <!-- Vegetation segments (noues) - highlighted -->
+  <path d="M10 120 Q60 100 110 130 Q160 160 200 140 Q240 120 280 150 Q320 180 390 160" 
+        fill="none" stroke="#22c55e" stroke-width="12" opacity="0.7" stroke-linecap="round"/>
+  <path d="M0 180 Q40 160 80 180 Q120 200 160 175" 
+        fill="none" stroke="#22c55e" stroke-width="10" opacity="0.6" stroke-linecap="round"/>
+  <path d="M240 90 Q280 70 340 85 Q380 95 400 80" 
+        fill="none" stroke="#22c55e" stroke-width="8" opacity="0.6" stroke-linecap="round"/>
+  
+  <!-- Segmentation masks overlay -->
+  <ellipse cx="60" cy="125" rx="35" ry="15" fill="#22c55e" opacity="0.3"/>
+  <ellipse cx="160" cy="145" rx="40" ry="18" fill="#22c55e" opacity="0.3"/>
+  <ellipse cx="260" cy="135" rx="30" ry="12" fill="#22c55e" opacity="0.3"/>
+  <ellipse cx="350" cy="155" rx="35" ry="14" fill="#22c55e" opacity="0.3"/>
+  
+  <!-- Mask outlines (segmentation effect) -->
+  <ellipse cx="60" cy="125" rx="35" ry="15" fill="none" stroke="#a855f7" stroke-width="2" stroke-dasharray="4,2"/>
+  <ellipse cx="160" cy="145" rx="40" ry="18" fill="none" stroke="#a855f7" stroke-width="2" stroke-dasharray="4,2"/>
+  <ellipse cx="260" cy="135" rx="30" ry="12" fill="none" stroke="#a855f7" stroke-width="2" stroke-dasharray="4,2"/>
+  <ellipse cx="350" cy="155" rx="35" ry="14" fill="none" stroke="#a855f7" stroke-width="2" stroke-dasharray="4,2"/>
+  
+  <!-- Label overlay -->
+  <rect x="15" y="255" width="120" height="30" fill="#12121a" opacity="0.9" rx="4"/>
+  <text x="25" y="275" font-family="monospace" font-size="11" fill="#a855f7">SEGMENTATION</text>
+  
+  <!-- Accuracy indicator -->
+  <rect x="280" y="255" width="105" height="30" fill="#12121a" opacity="0.9" rx="4"/>
+  <text x="290" y="275" font-family="monospace" font-size="11" fill="#22c55e">~70% Acc.</text>
+</svg>
